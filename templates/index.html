@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/assets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/assets/css/Contact-Form-Clean.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/assets/css/Login-Form-Clean.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/assets/css/Navigation-Clean.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/assets/css/styles.css')}}">
+</head>
+
+<body>
+    <!-- Start: Contact Form Clean -->
+    <section class="text-start contact-clean" style="height: 839px;padding: 79px 1px;padding-bottom: 80px;width: 1600px;max-height: none;">
+        <!-- Start: Navigation Clean -->
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="margin-bottom: -19px;padding-top: 16px;margin-top: -75px;">
+            <div class="container">
+                <a class="navbar-brand" href="#" style="margin-left: -97px;">Disease Prediction Project</a>
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+                    <span class="visually-hidden">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+{#                    <ul class="navbar-nav ms-auto">#}
+{#                        <li class="nav-item"><a class="nav-link active" href="#">First Item</a></li>#}
+{#                        <li class="nav-item"><a class="nav-link" href="#">Second Item</a></li>#}
+{#                        <li class="nav-item"><a class="nav-link" href="#">Third Item</a></li>#}
+{#                    </ul>#}
+                </div>
+            </div>
+        </nav><!-- End: Navigation Clean -->
+        <form class="pulse animated" method="post" style="padding-bottom: 75px;">
+            <h2 class="text-center">Select Symptoms</h2><!-- Start: Success Example -->
+            <div class="mb-3">
+                <input class="shadow-sm form-control" type="text" name="name" placeholder="Name", required>
+            </div><!-- End: Success Example -->
+            <div class="border rounded-0 shadow-sm" style="padding-bottom: 20px;padding-top: 20px;padding-right: 20px;padding-left: 20px;color: rgb(80, 94, 108);border-style: none;border-color: rgb(198,202,205);">
+                <label class="form-label" style="margin-bottom: 20px;margin-top: 10px;">
+                    <strong>Select Symptoms :</strong>&nbsp;
+                </label>
+                <select class="form-select" style="margin-bottom: 15px;padding-right: 0px;padding-bottom: 6px;padding-top: 6px;text-align: center;border-radius: 0;border-width: 0.2px;" name="select_symptom_1", required>
+                    {% for col in columns_name %}
+                        <option value={{ col }}>{{ col.replace('_', ' ').title() }}</option>
+                    {% endfor %}
+                </select>
+                <select class="form-select" style="margin-bottom: 15px;border-radius: 0;" name="select_symptom_2", required>
+                    {% for col in columns_name %}
+                        <option value={{ col }}>{{ col.replace('_', ' ').title() }}</option>
+                    {% endfor %}
+                </select>
+                <select class="form-select" style="margin-bottom: 15px;border-radius: 0;" name="select_symptom_3", required>
+                    {% for col in columns_name %}
+                        <option value={{ col }}>{{ col.replace('_', ' ').title() }}</option>
+                    {% endfor %}
+                </select>
+                <select class="form-select" style="margin-bottom: 15px;border-radius: 0;" name="select_symptom_4", required>
+                    {% for col in columns_name %}
+                        <option value={{ col }}>{{ col.replace('_', ' ').title() }}</option>
+                    {% endfor %}
+                </select>
+                <select class="form-select" style="box-shadow: inset 0px 0px;border-radius: 0;margin-bottom: 20px;" name="select_symptom_5", required>
+                    {% for col in columns_name %}
+                        <option value={{ col }}>{{ col.replace('_', ' ').title() }}</option>
+                    {% endfor %}
+                </select>
+            </div><!-- Start: Error Example -->
+            <div class="mb-3" style="margin: 0px;text-align: left;padding: 16px;padding-right: 16px;padding-bottom: 16px;padding-left: 3px;">
+                <button class="btn btn-primary text-center d-inline-block" data-bs-toggle="tooltip" data-bss-tooltip="" type="submit" style="text-align: left;transform: skew(0deg);margin-top: 16px;padding-top: 23px;padding-bottom: 23px;margin-bottom: -12px;" title="Click to predict">predict</button>
+                <div class="text-center text-black-50 border rounded-0 shadow-sm d-inline-block float-start" style="padding: 30px;width: 235px;margin-left: 164px;margin-bottom: 0px;margin-top: -45px;padding-bottom: 30px;padding-top: 24px;border: 1px solid rgb(0,0,0);">
+                    <strong style="padding-right: 0px;margin-left: 0px;margin-bottom: 0px;margin-right: 0px;margin-top: 0px;padding-top: -8px;padding-bottom: -1px;">{{ prediction }}</strong>
+                </div>
+                <button class="btn btn-primary text-center d-inline-block" data-bs-toggle="tooltip" data-bss-tooltip="" type="reset" style="text-align: center;transform: skew(0deg);margin-top: 16px;padding-top: 23px;padding-bottom: 23px;margin-bottom: -142px;margin-left: -123px;/* padding-left: 47px; */width: 118px;" title="" data-bs-original-title="Click to reset">reset</button>
+            </div>
+        </form>
+    </section><!-- End: Contact Form Clean -->
+    <script src="../static/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/assets/js/bs-init.js"></script>
+</body>
+
+</html>
