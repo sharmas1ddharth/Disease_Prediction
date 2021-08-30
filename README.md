@@ -1,57 +1,28 @@
-Mushroom_Classification
+Disease Prediction
 ==============================
 
-Classify whether a Mushroom is Edible or Poisonous by its specifications.
+Predict underlying disease by providing symptoms.
 
 Project Organization
 ------------
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
+    ├── README.md               <- The top-level README for developers using this project.
+    ├── data                    <- Data from third party sources
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+    ├── models                  <- Trained and serialized models, model predictions, or model summaries
     │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
+    ├── notebooks               <- Jupyter notebooks. Naming convention is a number (for ordering),
+    │                               the creator's initials, and a short `-` delimited description, e.g.
+    │                               `1.0-jqp-initial-data-exploration`.
     │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    ├── requirements.txt        <- The requirements file for reproducing the analysis environment, e.g.
+    │                               generated with `pip freeze > requirements.txt`
     │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
+    ├── model_and_symptoms.py   <- This file contains trained model, symptoms list and diseases name.
+    ├── app.py                  <- Main file of flask deployment
+    ├── static                  <- Folder containing 'css stylesheets' and other static files.
+    ├── templates               <- Folder contrains 'HTML Templates'.
 
 --------
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>

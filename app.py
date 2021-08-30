@@ -1,6 +1,6 @@
 from flask import Flask, request
 from flask import render_template
-from model_column import symptoms_name, symptoms_array, disease_name, model
+from model_and_symptoms import symptoms_name, symptoms_array, disease_name, model
 
 app = Flask(__name__)
 
