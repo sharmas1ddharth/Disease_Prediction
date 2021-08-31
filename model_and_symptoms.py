@@ -40,7 +40,7 @@ disease_name = ['Fungal infection', 'Allergy', 'GERD', 'Chronic cholestasis', 'D
                 'Arthritis', '(vertigo) Paroymsal  Positional Vertigo', 'Acne', 'Urinary tract infection', 'Psoriasis',
                 'Impetigo', 'Fungal infection']
 
-model = pickle.load(open("C:\\Users\\Siddharth\\Desktop\\Github Projects\\Disease_Prediction\\Models\\knn.model", 'rb'))
+model = pickle.load(open("Models\\knn.model", 'rb'))
 
 symptoms_array = []
 for i in symptoms_name:
