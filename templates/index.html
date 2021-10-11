@@ -43,7 +43,7 @@
                 <label class="form-label" style="margin-bottom: 20px;margin-top: 10px;">
                     <strong>Select Symptoms :</strong>&nbsp;
                 </label>
-                <select class="form-select" style="margin-bottom: 15px;padding-right: 0px;padding-bottom: 6px;padding-top: 6px;text-align: center;border-radius: 0;border-width: 0.2px;" name="select_symptom_1", required>
+                <select class="form-select" style="margin-bottom: 15px;padding-right: 0px;padding-bottom: 6px;padding-top: 6px;border-radius: 0;border-width: 0.2px;" name="select_symptom_1", required>
                     {% for col in columns_name %}
                         <option value={{ col }}>{{ col.replace('_', ' ').title() }}</option>
                     {% endfor %}
